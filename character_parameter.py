@@ -107,20 +107,20 @@ class StickMan:
         pygame.draw.line(surface, BLACK, body_bottom, left_leg_end, 3)
         pygame.draw.line(surface, BLACK, body_bottom, right_leg_end, 3)
 
-        # Stick man showcase
-        stick_man = StickMan(WIDTH // 2, HEIGHT // 2 + 100)
+# Stick man showcase
+stick_man = StickMan(WIDTH // 2, HEIGHT // 2 + 100)
 
-        # Game looping
-        clock = pygame.time.Clock()
-        running = True
+# Game looping
+clock = pygame.time.Clock()
+running = True
 
-        while running:
-            for event in pygame.event.get():
-                if event.type == pygame.QUIT:
-                    running = False
-           else if event.type == pygame.KEYDOWN:
-               if event.key == pygame.K_ESCAPE:
-                   running = False
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+        else if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_ESCAPE:
+                running = False
     
     # Key pressing
     keys = pygame.key.get_pressed()
