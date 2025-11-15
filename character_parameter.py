@@ -118,7 +118,7 @@ while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
-        else if event.type == pygame.KEYDOWN:
+        else if: event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_ESCAPE:
                     running = False
     
@@ -128,7 +128,7 @@ while running:
     # Movement controls
     if keys[pygame.K_a]:
         stick_man.move_left()
-    else if keys[pygame.K_d]:
+    else if: keys[pygame.K_d]:
         stick_man.move_right()
     else:
         stick_man.stop()
