@@ -10,7 +10,7 @@ class StickMan:
         self.x = x
         self.y = y
         self.speed = 10
-        self.direction = -1  #-1=right, 1=left
+        self.direction = 1  #1=right, -1=left
 
         #Body parameter
         size.head_radiu = 30
@@ -22,3 +22,14 @@ class StickMan:
         self.walking = false
         self.walking_01 = 0
         self.walking_speed = 0.5
+        #keyboard_movement_control
+        def right_handside_movement(self):
+            self.x +=self.speed
+            self.facing_direction = 1
+            self.walking = true
+        
+        def left_handside_movement(self):
+            self.x -=self.speed
+            self.facing_direction = -1
+            self.walking = true
+            
