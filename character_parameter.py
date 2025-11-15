@@ -11,6 +11,7 @@ pygame.display.set_caption("Moveable Stick Man - A (Left) D (Right)")
 
 # Colors
 BLACK = (0, 0, 0)
+WHITE = (255, 255, 255)
 
 #character appearence
 class StickMan:
@@ -119,7 +120,7 @@ class StickMan:
                 if event.key == pygame.K_ESCAPE:
                    running = False
     
-    # Handle continuous key presses
+    # Key pressing
     keys = pygame.key.get_pressed()
     
     # Movement controls
@@ -130,25 +131,22 @@ class StickMan:
     else:
         stick_man.stop()
     
-    # Update stick man
+    # Stick man refreshment
     stick_man.update()
     
-    # Clear the screen
+    # Background clearing
     screen.fill(WHITE)
     
-    # Draw ground
+    # Base ground line
     pygame.draw.rect(screen, (200, 200, 200), (0, HEIGHT - 50, WIDTH, 50))
     
     # Draw stick man
     stick_man.draw(screen)
     
-    # Draw instructions
-    draw_instructions(screen)
-    
-    # Update the display
+    # Display refreshment
     pygame.display.flip()
     
-    # Cap the frame rate
+    # Frame rate caption
     clock.tick(60)
 
 pygame.quit()
