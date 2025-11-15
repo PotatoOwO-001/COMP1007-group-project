@@ -16,3 +16,8 @@ class StickMan:
         size.body_length = 50
         size.hands_length = 40
         size.legs_length = 60
+
+        #movement animation
+        self.walking = false
+        self.walking_01 = 0
+        self.walking_speed = 0.5
