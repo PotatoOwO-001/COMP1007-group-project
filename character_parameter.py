@@ -54,22 +54,22 @@ class StickMan:
         self.x = max(size.head_radius), min(WIDTH - size.body_l)
 
         def draw(self, surface):
-        # Head
-        pygame.draw.circle(surface, BLACK, (self.x, self.y - self.body_length - self.head_radius), self.head_radius)
+            # Head
+            pygame.draw.circle(surface, BLACK, (self.x, self.y - self.body_length - self.head_radius), self.head_radius)
         
-        # Body
-        body_top = (self.x, self.y - self.body_length)
-        body_bottom = (self.x, self.y)
-        pygame.draw.line(surface, BLACK, body_top, body_bottom, 3)
+            # Body
+            body_top = (self.x, self.y - self.body_length)
+            body_bottom = (self.x, self.y)
+            pygame.draw.line(surface, BLACK, body_top, body_bottom, 3)
         
-        # Movement calculation of hand's animation
-        if self.walking:
-            # Arms swing opposite to legs when walking
-            left_hand_angle = math.pi/9 + math.sin(self.walk_phase) * 0.5
-            right_hand_angle = math.pi/9 - math.sin(self.walk_phase) * 0.5
-        else:
-            left_arm_angle = math.pi/9
-            right_arm_angle = math.pi/9
+            # Movement calculation of hand's animation
+            if self.walking:
+                # Hands opposite to legs during walking
+                left_hand_angle = math.pi/9 + math.sin(self.walk_phase) * 0.5
+                right_hand_angle = math.pi/9 - math.sin(self.walk_phase) * 0.5
+            else:
+                left_arm_angle = math.pi/9
+                right_arm_angle = math.pi/9
         
         # Arm direction adjustment
         if self.direction == 1:  
