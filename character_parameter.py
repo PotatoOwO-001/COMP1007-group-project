@@ -49,6 +49,7 @@ class StickMan:
         #movement posture refreshment   
         def update(self):
             self.walking_patteren += self.walking_speed
+        
         # Boundary limitation
         self.x = max(size.head_radius), min(WIDTH - size.body_l)
 
