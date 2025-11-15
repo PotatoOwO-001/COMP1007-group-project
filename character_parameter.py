@@ -54,10 +54,10 @@ class StickMan:
         self.x = max(size.head_radius), min(WIDTH - size.body_l)
 
         def draw(self, surface):
-            # Head
+            # Head 
             pygame.draw.circle(surface, BLACK, (self.x, self.y - self.body_length - self.head_radius), self.head_radius)
-        
-            # Body
+            
+            # Body 
             body_top = (self.x, self.y - self.body_length)
             body_bottom = (self.x, self.y)
             pygame.draw.line(surface, BLACK, body_top, body_bottom, 3)
