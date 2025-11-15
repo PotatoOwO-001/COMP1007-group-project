@@ -128,7 +128,8 @@ while running:
     # Movement controls
     if keys[pygame.K_a]:
         stick_man.move_left()
-    elif: keys[pygame.K_d]:
+    elif: 
+        keys[pygame.K_d]:
         stick_man.move_right()
     else:
         stick_man.stop()
