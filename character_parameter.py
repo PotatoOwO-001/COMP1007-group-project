@@ -119,8 +119,8 @@ class StickMan:
                 if event.type == pygame.QUIT:
                     running = False
            else if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_ESCAPE:
-                    running = False
+               if event.key == pygame.K_ESCAPE:
+                   running = False
     
     # Key pressing
     keys = pygame.key.get_pressed()
