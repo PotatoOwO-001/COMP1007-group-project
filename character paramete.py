@@ -3,6 +3,7 @@ import sys
 import math
 
 pygame.init()
+
 #character appearence
 class StickMan:
     def __init__(self, x, y):
