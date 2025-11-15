@@ -98,11 +98,11 @@ class StickMan:
         
         # Calculation of leg position's animation
         if self.walking:
-            left_leg_angle = math.pi/6 + math.sin(self.walk_pattern) * 0.3
-            right_leg_angle = math.pi/6 - math.sin(self.walk_pattern) * 0.3
+            left_leg_angle = math.pi/9 + math.sin(self.walk_pattern) * 0.3
+            right_leg_angle = math.pi/9 - math.sin(self.walk_pattern) * 0.3
         else:
-            left_leg_angle = math.pi/6
-            right_leg_angle = math.pi/6
+            left_leg_angle = math.pi/9
+            right_leg_angle = math.pi/9
         
         # Direction adjustment of legs
         if self.direction == 1:  # Facing right
@@ -125,8 +125,8 @@ class StickMan:
             )
         
         # Draw legs
-        pygame.draw.line(surface, BLACK, body_bottom, left_leg_end, 3)
-        pygame.draw.line(surface, BLACK, body_bottom, right_leg_end, 3)
+        pygame.draw.line(surface, BLACK, body_bottom, left_leg_end, 2)
+        pygame.draw.line(surface, BLACK, body_bottom, right_leg_end, 2)
         
 # Create stick man
 stick_man = StickMan(WIDTH // 2, HEIGHT // 2 + 100)
